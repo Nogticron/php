@@ -1,6 +1,6 @@
 <?php
 
-function cross_array($list_a, $list_b) {
+function cross_array(array $list_a, array $list_b) {
 
   if( count($list_a) > count($list_b) ){
     $max_list_length = count($list_a);
