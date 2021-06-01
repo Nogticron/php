@@ -31,7 +31,6 @@ function align_list_digits(array $list, int $digits) {
   return $list;
 }
 
-// 求める組み合わせの順番のインデックスのリストを返す関数
 function make_index_list(array $val_list) {
   $index_list = array();
 
