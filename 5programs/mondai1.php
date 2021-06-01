@@ -20,13 +20,13 @@ echo "合計(while) : ".$sum."\n";
 
 ## 再帰
 // 配列の要素数をnとする( list[0] ~ list[n-1] )
-function calc_sum(array $list, int $index, int $sum) {
+function calc_sum(array $list, int $index) {
   if ($index == count($list) - 1) {
     return $list[$index];
   } else {
-    return $list[$index] + calc_sum($list, $index+=1, $sum);
+    return $list[$index] + calc_sum($list, $index+=1);
   }
 }
 
-echo "合計(再帰)  : ".calc_sum($list, 0, 0)."\n";
+echo "合計(再帰)  : ".calc_sum($list, 0)."\n";
 
