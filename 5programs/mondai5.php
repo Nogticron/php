@@ -2,11 +2,6 @@
 // 1,2,…,9の数をこの順序で、"+"、"-"、またはななにもせず結果が100となるあらゆる組合せを出力するプログラムを記述せよ。
 // 例えば、1 + 2 + 34 – 5 + 67 – 8 + 9 = 100となる
 
-// $test_list = array(1, 2, 34, -5, 67, -8, 9);
-// $test_challenge_list = array(
-//   "12345-6-78+9"
-// );
-
 // 全ての組み合わせ候補の文字列のリストを返す関数
 function create_all_candidacy(array $list) {
   $challenge_list = array();
