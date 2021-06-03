@@ -2,6 +2,14 @@
 // 1,2,…,9の数をこの順序で、"+"、"-"、またはななにもせず結果が100となるあらゆる組合せを出力するプログラムを記述せよ。
 // 例えば、1 + 2 + 34 – 5 + 67 – 8 + 9 = 100となる
 
+
+function main(array $list) {
+  $challenge_list = create_all_candidacy($list);
+  $result_list = translate_str_to_list($challenge_list);
+  $correct_list = judge_sum_100($result_list);
+  print_formula($correct_list);
+}
+
 // 全ての組み合わせ候補の文字列のリストを返す関数
 function create_all_candidacy(array $list) {
   $challenge_list = array();
@@ -124,11 +132,15 @@ function print_formula(array $correct_list) {
 }
 
 
+echo "[ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]の場合の組み合わせは\n\n";
 $list = array(1, null, 2, null, 3, null, 4, null, 5, null, 6, null, 7, null, 8, null, 9);
+main($list);
 
-$challenge_list = create_all_candidacy($list);
-$result_list = translate_str_to_list($challenge_list);
-$correct_list = judge_sum_100($result_list);
-print_formula($correct_list);
+echo "\n\n[ 2, 2, 3, 3, 5, 5, 7, 7, 9 ]の場合の組み合わせは\n\n";
+$list = array(2, null, 2, null, 3, null, 3, null, 5, null, 5, null, 7, null, 7, null, 9);
+main($list);
 
+echo "\n\n[ 1, 1, 1, 1, 2, 2, 2, 2, 2 ]の場合の組み合わせは\n\n";
+$list = array(1, null, 1, null, 1, null, 1, null, 2, null, 2, null, 2, null, 2, null, 2);
+main($list);
 ?>
